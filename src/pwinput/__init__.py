@@ -66,7 +66,7 @@ if sys.platform == 'win32':
                     sys.stdout.write('\n')
                 return ''.join(enteredPassword)
             # handle keyboard interrupts
-            elif key in (3, 26):  # Ctrl+C + CTRL+Z
+            elif key in (3, 26):  # Ctrl+C or CTRL+Z
                 raise KeyboardInterrupt("Ctrl+C or Ctrl+Z detected")
             elif key in (8, 127): # Backspace/Del key erases previous output.
                 if len(enteredPassword) > 0:
@@ -137,7 +137,7 @@ else: # macOS and Linux
                     sys.stdout.write('\n')
                 return ''.join(enteredPassword)
             # handle keyboard interrupts
-            elif key in (3, 26):  # Ctrl+C + CTRL+Z
+            elif key in (3, 26):  # Ctrl+C or CTRL+Z
                 raise KeyboardInterrupt("Ctrl+C or Ctrl+Z detected")
             elif key in (8, 127): # Backspace/Del key erases previous output.
                 if len(enteredPassword) > 0:
